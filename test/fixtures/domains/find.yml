@@ -1,0 +1,6 @@
+base_url: http://example.net
+description: Porkmasters
+http_etag: "..."
+mail_host: lists.example.net
+self_link: http://localhost:9001/3.0/domains/lists.example.net
+url_host: example.net
