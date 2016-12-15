@@ -9,12 +9,10 @@ module Mailman3
     # Load all domain objects
     def self.all
       response = get('/domains').parsed_response
-      result = []
-      response['total_size'].times do |i|
-        entry = response["entry #{i}"]
-        result << new(entry)
+      response['entries'] ||= []
+      response['entries'].map do |entry|
+        new(entry)
       end
-      result
     end
 
     def self.find(name)

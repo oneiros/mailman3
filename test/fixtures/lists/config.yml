@@ -1,0 +1,51 @@
+acceptable_aliases: []
+admin_immed_notify: True
+admin_notify_mchanges: False
+administrivia: True
+advertised: True
+allow_list_posts: True
+anonymous_list: False
+archive_policy: public
+autorespond_owner: none
+autorespond_postings: none
+autorespond_requests: none
+autoresponse_grace_period: 90d
+autoresponse_owner_text:
+autoresponse_postings_text:
+autoresponse_request_text:
+bounces_address: ant-bounces@example.com
+collapse_alternatives: True
+convert_html_to_plaintext: False
+created_at: 20...T...
+default_member_action: defer
+default_nonmember_action: hold
+description:
+digest_last_sent_at: None
+digest_size_threshold: 30.0
+display_name: Ant
+filter_content: False
+first_strip_reply_to: False
+fqdn_listname: ant@example.com
+http_etag: "..."
+include_rfc2369_headers: True
+join_address: ant-join@example.com
+last_post_at: None
+leave_address: ant-leave@example.com
+list_name: ant
+mail_host: example.com
+next_digest_number: 1
+no_reply_address: noreply@example.com
+owner_address: ant-owner@example.com
+post_id: 1
+posting_address: ant@example.com
+posting_pipeline: default-posting-pipeline
+reply_goes_to_list: no_munging
+reply_to_address:
+request_address: ant-request@example.com
+scheme: http
+send_welcome_message: True
+subject_prefix: [Ant]
+subscription_policy: confirm
+volume: 1
+web_host: lists.example.com
+welcome_message_uri: mailman:///welcome.txt

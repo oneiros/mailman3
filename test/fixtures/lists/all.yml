@@ -1,0 +1,13 @@
+entries:
+  - display_name: Ant
+    fqdn_listname: ant@example.com
+    http_etag: "..."
+    list_id: ant.example.com
+    list_name: ant
+    mail_host: example.com
+    member_count: 0
+    self_link: http://localhost:9001/3.0/lists/ant.example.com
+    volume: 1
+http_etag: "..."
+start: 0
+total_size: 1

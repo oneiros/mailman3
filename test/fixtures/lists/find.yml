@@ -1,0 +1,9 @@
+display_name: Bee
+fqdn_listname: bee@example.com
+http_etag: "..."
+list_id: bee.example.com
+list_name: bee
+mail_host: example.com
+member_count: 0
+self_link: http://localhost:9001/3.0/lists/bee.example.com
+volume: 1
