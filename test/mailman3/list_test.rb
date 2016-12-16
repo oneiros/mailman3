@@ -76,5 +76,40 @@ module Mailman3
       })
       assert_equal true, result
     end
+
+    def test_it_allows_getting_all_members
+      list = List.new(list_id: 'ant.example.com')
+      Member.stub :all, [1, 2, 3] do
+        assert_equal [1, 2, 3], list.members
+      end
+    end
+
+    def test_it_allows_adding_members
+      list = List.new(list_id: 'ant.example.com')
+      Member.stub :create, true do
+        assert_equal true, list.subscribe("bperson@example.com")
+      end
+    end
+
+    def test_it_allows_adding_owners
+      list = List.new(list_id: 'ant.example.com')
+      Member.stub :create, true do
+        assert_equal true, list.add_owner("cperson@example.com")
+      end
+    end
+
+    def test_it_allows_removing_members
+      list = List.new(list_id: 'ant.example.com')
+      Member.stub :destroy, true do
+        assert_equal true, list.unsubscribe("bperson@example.com")
+      end
+    end
+
+    def test_it_allows_removing_owners
+      list = List.new(list_id: 'ant.example.com')
+      Member.stub :destroy, true do
+        assert_equal true, list.remove_owner("cperson@example.com")
+      end
+    end
   end
 end

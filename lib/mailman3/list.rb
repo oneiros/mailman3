@@ -48,5 +48,27 @@ module Mailman3
       self.class.patch("/lists/#{list_id}/config", body: attributes)
       true
     end
+
+    def members
+      Member.all(list_id)
+    end
+
+    def subscribe(email, options = {})
+      options.merge! list_id: list_id, subscriber: email
+      Member.create(options)
+    end
+
+    def unsubscribe(email)
+      Member.destroy(list_id, email)
+    end
+
+    def add_owner(email, options = {})
+      options.merge! list_id: list_id, subscriber: email, role: 'owner'
+      Member.create(options)
+    end
+
+    def remove_owner(email)
+      Member.destroy(list_id, email, 'owner')
+    end
   end
 end

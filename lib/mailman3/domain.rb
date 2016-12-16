@@ -34,5 +34,14 @@ module Mailman3
       delete("/domains/#{name}")
       true
     end
+
+    def lists
+      List.all(mail_host)
+    end
+
+    def create_list(name, attributes = {})
+      attributes.merge! fqdn_listame: "#{name}@#{mail_host}"
+      List.create(attributes)
+    end
   end
 end

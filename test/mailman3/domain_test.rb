@@ -44,5 +44,19 @@ module Mailman3
       result = Domain.destroy('lists.example.com')
       assert_equal true, result
     end
+
+    def test_it_allows_getting_all_lists_for_a_domain
+      domain = Domain.new(mail_host: 'lists.example.com')
+      List.stub :all, [1,2,3] do
+        assert_equal [1, 2, 3], domain.lists
+      end
+    end
+
+    def test_it_allows_creating_a_list
+      domain = Domain.new(mail_host: 'lists.example.com')
+      List.stub :create, true do
+        assert_equal true, domain.create_list(fqdn_listname: 'test@lists.example.com')
+      end
+    end
   end
 end
