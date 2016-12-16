@@ -1,0 +1,31 @@
+entries:
+  - address: http://localhost:9001/3.0/addresses/aperson@example.com
+    delivery_mode: regular
+    email: aperson@example.com
+    http_etag: ...
+    list_id: bee.example.com
+    member_id: 3
+    role: member
+    self_link: http://localhost:9001/3.0/members/3
+    user: http://localhost:9001/3.0/users/3
+  - address: http://localhost:9001/3.0/addresses/bperson@example.com
+    delivery_mode: regular
+    email: bperson@example.com
+    http_etag: ...
+    list_id: bee.example.com
+    member_id: 1
+    role: member
+    self_link: http://localhost:9001/3.0/members/1
+    user: http://localhost:9001/3.0/users/1
+  - address: http://localhost:9001/3.0/addresses/cperson@example.com
+    delivery_mode: regular
+    email: cperson@example.com
+    http_etag: ...
+    list_id: bee.example.com
+    member_id: 2
+    role: member
+    self_link: http://localhost:9001/3.0/members/2
+    user: http://localhost:9001/3.0/users/2
+http_etag: "..."
+start: 0
+total_size: 3

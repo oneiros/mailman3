@@ -7,6 +7,7 @@ module Mailman3
   autoload :Base, "mailman3/base"
   autoload :Domain, "mailman3/domain"
   autoload :List, "mailman3/list"
+  autoload :Member, "mailman3/member"
 
   class << self
     attr_accessor :base_url, :user, :password

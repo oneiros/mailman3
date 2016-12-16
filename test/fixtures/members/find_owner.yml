@@ -1,0 +1,9 @@
+address: http://localhost:9001/3.0/addresses/cperson@example.com
+delivery_mode: regular
+email: cperson@example.com
+http_etag: ...
+list_id: bee.example.com
+member_id: 7
+role: owner
+self_link: http://localhost:9001/3.0/members/7
+user: http://localhost:9001/3.0/users/2
