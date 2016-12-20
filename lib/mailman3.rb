@@ -4,6 +4,7 @@ require "httparty"
 require "mailman3/version"
 
 module Mailman3
+  autoload :APIError, "mailman3/api_error"
   autoload :Base, "mailman3/base"
   autoload :Domain, "mailman3/domain"
   autoload :List, "mailman3/list"

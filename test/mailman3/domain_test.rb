@@ -22,6 +22,14 @@ module Mailman3
       assert_equal "lists.example.net", result.mail_host
     end
 
+    def test_accessing_a_non_existant_domain_raises_an_error
+      stub_mailman_error(:get, "/domains/typo.example.com", 404, "404 Not Found")
+
+      assert_raises APIError do
+        Domain.find('typo.example.com')
+      end
+    end
+
     def test_it_allows_creating_new_domains
       stub_mailman(:post, "/domains", 'domains/create', {mail_host: 'lists.example.net'})
       stub_mailman(:get, "/domains/lists.example.net", 'domains/find')

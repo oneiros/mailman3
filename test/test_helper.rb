@@ -24,6 +24,16 @@ module MailmanStubber
         body: response_hash.to_json
       )
   end
+
+  def stub_mailman_error(method, path, code, message)
+    stub_request(method, "#{Mailman3.base_url}/3.0#{path}")
+      .with(basic_auth: ['mailman', 'mmtestpw'])
+      .to_return(
+        status: code,
+        headers: {content_type: 'application/json'},
+        body: message
+      )
+  end
 end
 
 Minitest::Test.include MailmanStubber
