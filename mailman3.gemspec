@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Access (parts of) the mailman 3(.0) REST API from Ruby.}
   spec.homepage      = "https://github.com/oneiros/mailman3"
+  spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
