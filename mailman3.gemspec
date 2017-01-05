@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["David Roetzel"]
   spec.email         = ["david@roetzel.de"]
 
-  spec.summary       = %q{Ruby library for accessing the mailman3 REST API.}
+  spec.summary       = %q{Access (parts of) the mailman 3(.0) REST API from Ruby.}
   spec.homepage      = "https://github.com/oneiros/mailman3"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
